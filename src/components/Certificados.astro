@@ -1,0 +1,19 @@
+---
+interface Props {
+	titulo: string;
+  empresa: string;
+  anio: string;
+  url: string;
+}
+
+const { titulo, empresa, anio, url } = Astro.props;
+---
+
+<article class="bg-terciary-color w-full rounded-[20px] h-64 p-7 flex flex-col justify-between mb-[14px] lg:w-[297px]">
+  <div>
+    <h4 class="font-semibold text-base">{titulo}</h4>
+    <h5 class="font-semibold text-sm text-text-color-secondary pt-3">{empresa}</h5>
+    <h5 class="font-semibold text-sm text-text-color-secondary pt-3">{anio}</h5>
+  </div>
+  <a href={url} class="font-semibold text-base text-secondary-color w-24 h-9 flex justify-center items-center border border-secondary-color rounded-[20px]">Ver</a>
+</article>

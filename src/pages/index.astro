@@ -1,0 +1,49 @@
+---
+import Certificados from '../components/Certificados.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<!-- pl-4 va en el main -->
+
+<Layout title="Juanqx - Desarrollador Backend e ingeniero informatico.">
+	<div class="w-[54px] h-[2px] bg-white mx-auto mt-2" slot="principal" transition:name="indicador"></div>
+	<main slot="main" class="w-full h-max pt-7 max-w-[932px] sm:pl-4 md:ml-2 md:mr-0 lg:ml-3 lg:w-[932px] xl:ml-0">
+		<section>
+			<p class="font-medium text-base text-text-color-secondary md:text-lg">Mi nombre es Juan. Soy ingeniero informático y desarrollador de software especializado en el desarrollo de aplicaciones móviles.<br><br>Como entusiasta de la programación, estoy dispuesto a aceptar nuevos retos que me permitan consolidar cada vez más mi carrera dentro de la industria al mismo tiempo que contribuyo al crecimiento de proyectos y equipos. <br><br>Me considero una persona dedicada, comprometida y que siempre busca hacer su trabajo lo mejor posible.</p>
+		</section>
+
+		<div class="flex flex-row w-max gap-6 mt-8">
+			<a href="https://github.com/Juanqx" target="_blank"><img src="../../public/githubSobremi.png" alt="github"></a>
+			<a href="https://www.linkedin.com/in/juanqx" target="_blank"><img src="../../public/linkedinSobremi.png" alt="linkedin"></a>
+		</div>
+
+		<section>
+			<h3 class="font-semibold text-lg mt-[70px] mb-5">Educación</h3>
+			<div class="flex flex-row justify-start lg:justify-around h-[281px] lg:h-[274px] items-center">
+				<div class="hidden bg-cuartiary-color h-[274px] w-[204px] lg:flex lg:justify-center lg:items-center rounded-l-[30px]">
+					<img src="../../public/tecnmLogo.png" alt="tecnm">
+				</div>
+				<article class="w-full h-[281px] lg:max-w-[728px] self-start bg-terciary-color rounded-[30px] p-7 flex flex-col justify-between lg:rounded-l-none lg:h-[274px]">
+					<div class="flex flex-row gap-2 items-center h-max">
+						<img src="../../public/graduacionLogo.png" alt="">
+						<h4 class="font-medium text-xs italic">UNIVERSIDAD</h4>
+					</div>
+					<h3 class="font-semibold text-base text-text-color-primary">Ingeniería Informática con especialidad en sistemas redes computacionales y servicios de aplicación.</h3>
+					<h4 class="font-medium text-sm text-text-color-secondary">Instituto Tecnológico de Chiná.</h4>
+					<h4 class="font-medium text-sm text-text-color-secondary">Campeche, México.</h4>
+					<h4 class="font-medium text-sm text-text-color-secondary">2019 - 2023</h4>
+				</article>
+			</div>
+		</section>
+
+		<section class="pb-10 flex flex-col">
+			<h3 class="font-semibold text-lg mt-14 mb-5">Certificados</h3>
+			<div class="md:flex md:flex-row md:gap-1 md:justify-between lg:gap-0">
+				<Certificados titulo='Programación de Aplicaciones para Android con Kotlin.' empresa='Udemy.' anio='2024' url='#ver' />
+				<Certificados titulo='Fundamentos profesionales del desarrollo de software.' empresa='Microsoft y Linkedin.' anio='2024' url='#ver' />
+				<!-- <Certificados titulo='Máster Completo en Java de cero a experto 2024.' empresa='Udemy.' anio='2024' url='#ver' /> -->
+				<Certificados titulo='Habilidades profesionales para el desarrollo de software.' empresa='Linkedin.' anio='2024' url='#ver' />
+			</div>
+		</section>
+	</main>
+</Layout>

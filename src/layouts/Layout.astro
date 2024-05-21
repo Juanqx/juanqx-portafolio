@@ -1,0 +1,78 @@
+---
+import '@fontsource-variable/montserrat';
+
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="p-4 max-w-[1250px] mx-auto">
+		<header class="flex flex-col items-center max-w-[1250px] mx-auto">
+			<!-- img banner -->
+			<img src="../../public/imgHeader.png" alt="banner" class="h-24 sm:w-screen lg:h-36 xl:h-[169px]">
+			<!-- contenedor de img y textos -->
+			<div class="flex flex-col items-center mt-[-30px] w-full sm:flex-row sm:justify-between sm:gap-5 sm:pl-4 md:pl-5 lg:mt-[-50px]">
+				<div class="flex flex-col sm:flex-row sm:gap-5">
+					<div class="flex flex-col items-center xl:mt-[2px]">
+						<div class="border-[3px] rounded-full border-secondary-color p-1 w-max lg:w-[175px] lg:h-[175px] ">
+							<img src="../../public/fotomia.png" alt="juanantoniocu" class="w-[85px] m-auto md:w-[100px] lg:w-[160px] lg:h-[160px] ">
+						</div>
+						<h4 class="w-12 h-6 font-bold text-sm bg-rojo-color rounded-[20px] flex justify-center items-center mt-[-20px] lg:w-[68px] lg:h-[28px] lg:text-base">Dev</h4>
+					</div>
+					<div class="mt-4 flex flex-col items-center gap-[6px] sm:items-start sm:pt-10 md:pt-11 sm:mt-0 lg:pt-[70px] lg:pl-3 xl:pl-5">
+						<h1 class="flex flex-row items-center gap-3 text-2xl font-semibold text-text-color-primary w-max md:text-[28px] lg:text-[30px] lg:gap-4 xl:text-[34px]">Juan Antonio Cu <img src="../../public/verificado.png" alt="verificado" class="w-[16px] h-[16px] lg:w-5 lg:h-5"></h1>
+						<h2 class="font-medium text-sm text-text-color-secondary md:text-base xl:text-lg">@Desarrollador_Móvil</h2>
+						<div class="hidden lg:flex lg:flex-row lg:gap-2 lg:mt-4">
+							<h3 class="font-semibold text-sm px-3 py-1 rounded-3xl bg-terciary-color">#Kotlin</h3>
+							<h3 class="font-semibold text-sm px-3 py-1 rounded-3xl bg-terciary-color">#Android</h3>
+							<h3 class="font-semibold text-sm px-3 py-1 rounded-3xl bg-terciary-color">#Programación</h3>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-row w-max gap-3 mt-7 sm:mt-0 sm:pt-6 md:pt-5 md:pr-6 lg:pr-16 lg:mt-0 lg:pt-2 xl:pt-4 xl:justify-end">
+					<a href="#curriculum" class="font-bold text-sm w-[106px] h-9 bg-secondary-color text-text-color-terciary rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11">Curriculum</a>
+					<a href="#Contacto" class="font-bold text-sm w-[106px] h-9 border-[1px] border-white rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11">Contacto</a>
+				</div>
+			</div>
+			<nav class="mt-8 flex flex-row justify-center gap-[13px] w-screen px-4 text-sm font-semibold max-w-[1250px] sm:text-base sm:gap-11 sm:justify-start sm:pl-9 sm:mt-11 md:pl-11 lg:pl-12 xl:pl-9">
+				<a href="/">Principal <slot name="principal"/></a>
+				<a href="experiencia">Experiencia <slot name="experiencia" /> </a>
+				<a href="proyectos">Proyectos <slot name="proyectos" /></a>
+				<a href="tecnologias">Tecnologías <slot name="tecnologias" /></a>
+			</nav>
+		</header>
+		<!-- contenido de la página -->
+		<slot name="main" />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+		scroll-behavior: smooth;
+		--primary-color: #10171D;
+		--secondary-color: #21C195;
+		--terciary-color: #1A2127;
+		--cuartiary-color: #1D252C;
+		--rojo-color: #EB0400;
+		--text-color-primary: #FFFFFF;
+		--text-color-secondary: #8B8C91;
+		--text-color-terciary: #10171D; 
+	}
+	html {
+		font-family: "montserrat", system-ui, sans-serif;
+		background: var(--primary-color);
+	}
+</style>
