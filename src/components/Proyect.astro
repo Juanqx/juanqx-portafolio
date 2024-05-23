@@ -9,13 +9,13 @@ const { img, anio, titulo, techs } = Astro.props;
 ---
 
 
-<article class="flex flex-row"> 
+<article class="flex flex-row sm:flex-col sm:w-[290px] sm:mb-2 lg:w-[306px]"> 
   <div class="flex flex-row items-end mr-4">
-    <img src={img} alt="equirent" class="w-[150px] min-w-[150px] h-[83px] rounded-xl">
-    <div class="font-semibold text-xs bg-primary-color ml-[-45px] mb-[5px] py-[2px] px-[4px] rounded-[4px]">{anio}</div>
+    <img src={img} alt="equirent" class="w-[150px] min-w-[150px] h-[83px] rounded-xl sm:w-[290px] sm:h-[150px] lg:w-[306px] lg:h-[170px]">
+    <div class="font-semibold text-xs bg-primary-color ml-[-45px] mb-[5px] py-[2px] px-[4px] rounded-[4px] flex justify-center items-center">{anio}</div>
   </div>
-  <div class="flex flex-col gap-3">
-    <p class="text-sm font-semibold">{titulo}</p>
-    <p class="text-xs font-semibold text-text-color-secondary">{techs}</p>
+  <div class="flex flex-col gap-3 sm:w-full pr-3 sm:gap-1 sm:mt-2">
+    <p class="text-sm font-semibold sm:text-base">{titulo}</p>
+    <p class="text-xs font-semibold text-text-color-secondary sm:text-sm">{techs}</p>
   </div>
 </article>
