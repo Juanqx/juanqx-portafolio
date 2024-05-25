@@ -1,5 +1,8 @@
 ---
 import Certificados from '../components/Certificados.astro';
+import LineaTiempo from '../components/LineaTiempo.astro';
+import Proyect from '../components/Proyect.astro';
+import Techs from '../components/Techs.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -18,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 
 		<section>
-			<h3 class="font-semibold text-lg mt-[70px] mb-5">Educación</h3>
+			<h3 class="font-medium italic text-base mt-[50px] mb-5">Educación</h3>
 			<div class="flex flex-row justify-start lg:justify-around h-[281px] lg:h-[274px] items-center">
 				<div class="hidden bg-cuartiary-color h-[274px] w-[204px] lg:flex lg:justify-center lg:items-center rounded-l-[30px]">
 					<img src="../../public/tecnmLogo.png" alt="tecnm">
@@ -36,14 +39,21 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 
-		<section class="pb-10 flex flex-col">
-			<h3 class="font-semibold text-lg mt-14 mb-5">Certificados</h3>
-			<div class="md:flex md:flex-row md:gap-1 md:justify-between lg:gap-0">
-				<Certificados titulo='Programación de Aplicaciones para Android con Kotlin.' empresa='Udemy.' anio='2024' url='#ver' />
-				<Certificados titulo='Fundamentos profesionales del desarrollo de software.' empresa='Microsoft y Linkedin.' anio='2024' url='#ver' />
-				<!-- <Certificados titulo='Máster Completo en Java de cero a experto 2024.' empresa='Udemy.' anio='2024' url='#ver' /> -->
-				<Certificados titulo='Habilidades profesionales para el desarrollo de software.' empresa='Linkedin.' anio='2024' url='#ver' />
-			</div>
+		<section id="experiencia"> 
+			<h3 class="font-bold text-lg mt-10 mb-9 lg:text-xl ">Experiencia</h3>
+			<LineaTiempo />
 		</section>
+
+		<h3 class="font-bold text-lg mt-11 mb-6 lg:text-xl" id="proyectos">Proyectos seleccionados</h3>
+    <section class="flex flex-col gap-5 mb-8 max-w-[940px] sm:flex-row sm:flex-wrap sm:gap-2">
+      <Proyect img="../../public/proyectos/equirent.png" anio="2022" titulo="Software para el control de rentas de baños." techs="Express - Mysql."/>
+      <Proyect img="../../public/proyectos/tecnmApp.png" anio="2023" titulo="Software de gestión académica." techs="Php - Mysql."/>
+      <Proyect img="../../public/proyectos/BicRent.png" anio="2023" titulo="API-REST desarrollada con express y mysql." techs="Express - Mysql."/>
+    </section>
+
+		<h3 class="font-bold text-lg mt-11 mb-6 lg:text-xl" id="tecnologias">Tecnologías</h3>
+		<section class="pb-12 flex flex-col gap-3 max-w-[932px]">
+      <Techs />
+    </section>
 	</main>
 </Layout>
