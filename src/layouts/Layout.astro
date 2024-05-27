@@ -50,13 +50,19 @@ import { ViewTransitions } from 'astro:transitions';
 					<a href="#Contacto" class="font-bold text-sm w-[106px] h-9 border-[1px] border-white rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11">Contacto</a>
 				</div>
 			</div>
-			<nav class="mt-8 flex flex-row justify-center gap-[13px] w-screen px-4 text-sm font-semibold max-w-[1250px] sm:text-base sm:gap-11 sm:justify-start sm:pl-9 sm:mt-11 md:pl-11 lg:pl-12 xl:pl-9">
+			<!-- <nav class="mt-8 flex flex-row justify-center gap-[13px] w-screen px-4 text-sm font-semibold max-w-[1250px] sm:text-base sm:gap-11 sm:justify-start sm:pl-9 sm:mt-11 md:pl-11 lg:pl-12 xl:pl-9">
 				<a href="#home">Principal <slot name="principal"/></a>
 				<a href="#experiencia">Experiencia <slot name="experiencia" /> </a>
 				<a href="#proyectos">Proyectos <slot name="proyectos" /></a>
 				<a href="#tecnologias">Tecnologías <slot name="tecnologias" /></a>
-			</nav>
+			</nav> -->
 		</header>
+		<nav class="mt-4 pt-4 flex flex-row gap-[13px] w-full text-sm font-semibold max-w-[916px] bg-primary-color border-b border-[#80808065] sm:text-base sm:gap-11 sm:justify-start sm:mt-11 sm:pl-4 md:pl-6 lg:pl-7 xl:pl-4">
+			<a href="#home">Principal <slot name="principal"/></a>
+			<a href="#experiencia">Experiencia <slot name="experiencia" /> </a>
+			<a href="#proyectos">Proyectos <slot name="proyectos" /></a>
+			<a href="#tecnologias">Tecnologías <slot name="tecnologias" /></a>
+		</nav>
 		<!-- contenido de la página -->
 		<slot name="main" />
 	</body>
@@ -77,5 +83,11 @@ import { ViewTransitions } from 'astro:transitions';
 	html {
 		font-family: "montserrat", system-ui, sans-serif;
 		background: var(--primary-color);
+	}
+
+	nav {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
 	}
 </style>
