@@ -1,0 +1,49 @@
+---
+import '@fontsource-variable/montserrat';
+
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="../../public/imgLogo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		
+		<!-- contenido de la página -->
+		<slot name="main" />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+		scroll-behavior: smooth;
+		--primary-color: #10171D;
+		--secondary-color: #21C195;
+		--terciary-color: #1A2127;
+		--cuartiary-color: #1D252C;
+		--rojo-color: #EB0400;
+		--text-color-primary: #FFFFFF;
+		--text-color-secondary: #8B8C91;
+		--text-color-terciary: #10171D; 
+	}
+	html {
+		font-family: "montserrat", system-ui, sans-serif;
+		background: var(--primary-color);
+	}
+
+	::-webkit-scrollbar {
+    display: none;
+	}
+</style>
