@@ -48,7 +48,7 @@ import { ViewTransitions } from 'astro:transitions';
 				<!-- btns de cv y contacto -->
 				<div class="flex flex-row w-max gap-3 mt-7 sm:mt-0 sm:pt-6 md:pt-5 md:pr-6 lg:pr-16 lg:mt-0 lg:pt-2 xl:pt-4 xl:justify-end">
 					<a href="#curriculum" class="font-bold text-sm w-[106px] h-9 bg-secondary-color text-text-color-terciary rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11">Curriculum</a>
-					<a href="#Contacto" class="font-bold text-sm w-[106px] h-9 border-[1px] border-white rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11">Contacto</a>
+					<a href="mailto:Antony556_04@outlook.com" class="font-bold text-sm w-[106px] h-9 border-[1px] border-white rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11">Contacto</a>
 				</div>
 			</div>
 			<!-- <nav class="mt-8 flex flex-row justify-center gap-[13px] w-screen px-4 text-sm font-semibold max-w-[1250px] sm:text-base sm:gap-11 sm:justify-start sm:pl-9 sm:mt-11 md:pl-11 lg:pl-12 xl:pl-9">
@@ -96,45 +96,3 @@ import { ViewTransitions } from 'astro:transitions';
     display: none;
 	}
 </style>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("nav a")
-
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
-            } else {
-              item.classList.remove("text-yellow-500")
-            }
-          })
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    })
-
-    sections.forEach((section) => {
-      observer.observe(section)
-    })
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect()
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section)
-        })
-      }
-    }
-  })
-</script>
