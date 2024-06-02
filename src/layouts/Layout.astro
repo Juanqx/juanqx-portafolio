@@ -19,10 +19,10 @@ import { ViewTransitions } from 'astro:transitions';
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="p-4 max-w-[1250px] mx-auto">
+	<body class="p-4 max-w-[1250px] mx-auto pt-0">
 		<header class="flex flex-col items-center max-w-[1250px] mx-auto" id="home">
 			<!-- img banner -->
-			<img src="../../public/imgHeader.png" alt="banner" class="h-24 sm:w-screen lg:h-36 xl:h-[169px]">
+			<img src="../../public/imgHeader.png" alt="banner" class="h-24 pt-4 sm:w-screen lg:h-36 xl:h-[169px]">
 			<!-- contenedor de img y textos -->
 			<div class="flex flex-col items-center mt-[-30px] w-full sm:flex-row sm:justify-between sm:gap-5 sm:pl-4 md:pl-5 lg:mt-[-50px]">
 				<div class="flex flex-col sm:flex-row sm:gap-5">
@@ -58,11 +58,11 @@ import { ViewTransitions } from 'astro:transitions';
 				<a href="#tecnologias">Tecnologías <slot name="tecnologias" /></a>
 			</nav> -->
 		</header>
-		<nav class="mt-5 pt-3 flex flex-row gap-[13px] justify-center w-full text-sm font-semibold max-w-[950px] bg-primary-color border-b border-[#58585859] sm:text-base sm:gap-11 sm:justify-start sm:mt-11 sm:pl-4 md:pl-6 lg:pl-7 xl:pl-4">
-			<a href="#home">Principal <slot name="principal"/></a>
-			<a href="#experiencia">Experiencia <slot name="experiencia" /> </a>
-			<a href="#proyectos">Proyectos <slot name="proyectos" /></a>
-			<a href="#tecnologias">Tecnologías <slot name="tecnologias" /></a>
+		<nav class="mt-5 py-3 flex flex-row gap-[13px] justify-center w-full text-sm font-semibold max-w-[950px] bg-primary-color border-b border-[#58585859] sm:text-base sm:gap-11 sm:justify-start sm:mt-11 sm:pl-4 md:pl-6 lg:pl-7 xl:pl-4">
+			<a href="#home" class="hover:text-secondary-color">Principal <slot name="principal"/></a>
+			<a href="#experiencia" class="hover:text-secondary-color">Experiencia <slot name="experiencia" /> </a>
+			<a href="#proyectos" class="hover:text-secondary-color">Proyectos <slot name="proyectos" /></a>
+			<a href="#tecnologias" class="hover:text-secondary-color">Tecnologías <slot name="tecnologias" /></a>
 		</nav>
 		<!-- contenido de la página -->
 		<slot name="main" />
@@ -96,3 +96,45 @@ import { ViewTransitions } from 'astro:transitions';
     display: none;
 	}
 </style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section")
+    const navItems = document.querySelectorAll("nav a")
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-yellow-500")
+            } else {
+              item.classList.remove("text-yellow-500")
+            }
+          })
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    })
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect()
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section)
+        })
+      }
+    }
+  })
+</script>
