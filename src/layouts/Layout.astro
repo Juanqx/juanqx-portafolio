@@ -45,8 +45,8 @@ import { ViewTransitions } from 'astro:transitions';
 				</div>
 				<!-- btns de cv y contacto -->
 				<div class="flex flex-col sm:flex-row w-[90%] gap-3 mt-7 sm:w-max sm:mt-0 sm:pt-0 md:pt-0 md:pr-6 lg:pr-16 lg:mt-0 lg:pt-2 xl:pt-4 xl:justify-end">
-					<a href="../../public/CV_JuanAntonioCuCauich_DesarrolladorFullstack.pdf" class="font-bold text-sm h-10 sm:mt-0 sm:w-[106px] sm:h-9 bg-secondary-color text-text-color-terciary rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11" target="_blank" title="CV-FullStack">Curriculum</a>
-					<a href="mailto:Antony556_04@outlook.com" class="font-bold text-sm h-10 sm:w-[106px] sm:h-9 border-[1px] border-white rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11" title="Antony556_04@outlook.com">Contacto</a>
+					<a href="../../public/CV_JuanAntonioCuCauich_DesarrolladorFullstack.pdf" class="font-bold text-sm h-10 sm:mt-0 sm:w-[106px] sm:h-9 bg-secondary-color text-text-color-terciary rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11" target="_blank" data-title="CV-FullStack">Curriculum</a>
+					<a href="mailto:Antony556_04@outlook.com" class="font-bold text-sm h-10 sm:w-[106px] sm:h-9 border-[1px] border-white rounded-[20px] flex justify-center items-center lg:text-base lg:w-32 lg:h-11" data-title="Antony556_04@outlook.com">Contacto</a>
 				</div>
 			</div>
 			<!-- <nav class="mt-8 flex flex-row justify-center gap-[13px] w-screen px-4 text-sm font-semibold max-w-[1250px] sm:text-base sm:gap-11 sm:justify-start sm:pl-9 sm:mt-11 md:pl-11 lg:pl-12 xl:pl-9">
@@ -92,5 +92,31 @@ import { ViewTransitions } from 'astro:transitions';
 
 	::-webkit-scrollbar {
     display: none;
+	}
+
+	[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+	}
+	[data-title]:after {
+			content: attr(data-title);
+			background-color: rgb(77, 77, 77);
+			color: #fff;
+			font-size: 14px;
+			font-family: "montserrat", system-ui, sans-serif;
+			position: absolute;
+			padding: 7px 20px;
+			bottom: -3.5em;
+			/* left: 10%; */
+			white-space: nowrap;
+			opacity: 0;
+			z-index: 99999;
+			visibility: hidden;
+			border-radius: 5px;
+			
+	}
+	[data-title] {
+			position: relative;
 	}
 </style>
