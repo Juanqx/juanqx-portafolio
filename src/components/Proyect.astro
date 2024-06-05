@@ -12,7 +12,7 @@ const { img, anio, titulo, techs, pagina } = Astro.props;
 
 <article class="flex flex-row min-h-[84px] sm:flex-col sm:w-[290px] sm:mb-2 lg:w-[304px]"> 
   <a href={pagina} class="flex flex-row items-end mr-4 sm:mr-0">
-    <img src={img} alt="equirent" class="w-[140px] min-w-[150px] h-[83px] rounded-xl sm:w-[290px] sm:h-[150px] lg:w-[306px] lg:h-[170px]">
+    <img src={img} alt="equirent" class="w-[140px] min-w-[150px] min-h-[83px] rounded-xl sm:w-[290px] sm:h-[150px] lg:w-[306px] lg:h-[170px]">
     <div class="font-semibold text-xs bg-primary-color ml-[-45px] mb-[5px] py-[2px] px-[4px] rounded-[4px] flex justify-center items-center">{anio}</div>
   </a>
   <div class="flex flex-col gap-2 mt-1 sm:mr-4 sm:w-full pr-3 sm:gap-1 sm:mt-2">
