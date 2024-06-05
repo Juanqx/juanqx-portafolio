@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
 	<main slot="main" class="w-full h-max pt-7 max-w-[932px] md:my-2 md:mr-0 lg:ml-3 lg:w-[932px] xl:ml-0">
 		<!-- seccion de about -->
 		<section>
-			<p class="font-normal text-base text-text-color-primary sm:text-base md:text-lg">Mi nombre es Juan.  Soy ingeniero informático y <strong class="font-medium">desarrollador de software </strong> especializado en el desarrollo de aplicaciones web.<br><br>Como entusiasta de la <strong class="font-medium">programación</strong>, estoy dispuesto a aceptar nuevos retos que me permitan consolidar cada vez más mi carrera dentro de la industria al mismo tiempo que contribuyo al crecimiento de proyectos y equipos. <br><br>Me considero una persona <strong class="font-medium">dedicada, comprometida</strong> y que siempre busca hacer su trabajo lo mejor posible.</p>
+			<p class="font-normal text-base text-text-color-primary md:font-medium">Mi nombre es Juan.  Soy ingeniero informático y <strong class="font-medium">desarrollador de software </strong> especializado en el desarrollo de aplicaciones web.<br><br>Como entusiasta de la <strong class="font-medium">programación</strong>, estoy dispuesto a aceptar nuevos retos que me permitan consolidar cada vez más mi carrera dentro de la industria al mismo tiempo que contribuyo al crecimiento de proyectos y equipos. <br><br>Me considero una persona <strong class="font-medium">dedicada, comprometida</strong> y que siempre busca hacer su trabajo lo mejor posible.</p>
 		</section>
 		
 		 <!-- seccion de la educacion (parte del about) -->
@@ -40,12 +40,12 @@ import Layout from '../layouts/Layout.astro';
 		<!-- Seccion de la experiencia -->
 		<section id="experiencia" class="pt-14"> 
 			
-			<h3 class="font-bold text-lg mt-2 mb-9 lg:text-xl ">Experiencia <span class="text-lg font-bold italic text-secondary-color">.</span></h3>
+			<h3 class="font-bold text-2xl mt-2 mb-9">Experiencia <span class="text-lg font-bold italic text-secondary-color">.</span></h3>
 			<LineaTiempo />
 		</section>
 
 		<!-- Seccion de los proyectos -->
-		<h3 class="font-bold text-lg pt-16 mb-6 lg:text-xl" id="proyectos">Proyectos seleccionados <span class="text-lg font-bold text-secondary-color">.</span></h3>
+		<h3 class="font-bold text-2xl pt-16 mb-8" id="proyectos">Proyectos seleccionados <span class="text-lg font-bold text-secondary-color">.</span></h3>
     <section class="flex flex-col gap-5 max-w-[940px] sm:flex-row sm:flex-wrap sm:gap-2">
       <Proyect img="https://github.com/Juanqx/juanqx-portafolio/blob/main/public/proyectos/equirent.png?raw=true" anio="2022" titulo="Software para el control de rentas." techs="Express - Mysql." pagina='proyecto1'/>
       <Proyect img="https://github.com/Juanqx/juanqx-portafolio/blob/main/public/proyectos/tecnmApp.png?raw=true" anio="2023" titulo="Software de gestión académica." techs="Php - Mysql." pagina='proyecto2'/>
@@ -53,7 +53,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
 		<!-- Seccion de las tecnologias -->
-		<h3 class="font-bold text-lg pt-16 mb-6 lg:text-xl" id="tecnologias">Tecnologías <span class="text-lg font-bold text-secondary-color">.</span></h3>
+		<h3 class="font-bold text-2xl pt-16 mb-7" id="tecnologias">Tecnologías <span class="text-lg font-bold text-secondary-color">.</span></h3>
 		<section class="pb-12 flex flex-col gap-3 max-w-[932px]">
       <Techs />
     </section>
