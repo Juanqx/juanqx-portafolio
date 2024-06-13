@@ -25,12 +25,12 @@ import { ViewTransitions } from 'astro:transitions';
 		<meta property="og:image:height" content="630">
 		<ViewTransitions />
 	</head>
-	<body class="p-4 max-w-[1250px] mx-auto pt-0">
-		<header class="flex flex-col items-center max-w-[1250px] mx-auto" id="home">
+	<body class="p-4 max-w-[1070px] mx-auto pt-0">
+		<header class="flex flex-col items-center max-w-[1070px] mx-auto" id="home">
 			<!-- img banner -->
-			<img src="https://i.imgur.com/v4ztTLr.png" alt="banner" class="h-24 pt-4 sm:w-screen lg:h-36 xl:h-[169px]">
+			<img src="https://i.imgur.com/v4ztTLr.png" alt="banner" class="h-28 hidden pt-4 sm:w-screen sm:block md:h-32 lg:h-36 xl:h-[169px]">
 			<!-- contenedor de img y textos -->
-			<div class="flex flex-col items-center mt-[-30px] w-full sm:flex-row sm:justify-between sm:gap-5 sm:pl-4 md:pl-5 lg:mt-[-50px]">
+			<div class="flex flex-col items-center mt-[30px] w-full sm:mt-[-30px] sm:flex-row sm:justify-between sm:gap-5 sm:pl-4 md:pl-5 lg:mt-[-50px]">
 				<div class="flex flex-col sm:flex-row sm:gap-5">
 					<div class="flex flex-col items-center xl:mt-[2px]">
 						<div class="border-[3px] rounded-full border-secondary-color p-1 w-max lg:w-[175px] lg:h-[175px] ">
@@ -74,7 +74,7 @@ import { ViewTransitions } from 'astro:transitions';
 				<a href="#tecnologias">Tecnologías <slot name="tecnologias" /></a>
 			</nav> -->
 		</header>
-		<nav class="mt-5 py-3 flex flex-row gap-[16px] justify-center w-full text-sm font-semibold max-w-[950px] bg-primary-color border-b border-[#58585859] sm:text-base sm:gap-11 sm:justify-start sm:mt-11 sm:pl-4 md:pl-6 lg:pl-7 xl:pl-4">
+		<nav class="mt-5 py-3 flex flex-row gap-[16px] justify-center w-full text-sm font-semibold max-w-[1070px] bg-primary-color border-b border-[#58585859] sm:text-base sm:gap-11 sm:justify-start sm:mt-11 sm:pl-4 md:pl-6 lg:pl-7 xl:pl-4">
 			<a href="#home" class="hover:text-secondary-color">Principal <slot name="principal"/></a>
 			<a href="#experiencia" class="hover:text-secondary-color">Experiencia <slot name="experiencia" /> </a>
 			<a href="#proyectos" class="hover:text-secondary-color">Proyectos <slot name="proyectos" /></a>
