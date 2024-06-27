@@ -25,20 +25,20 @@ import { ViewTransitions } from 'astro:transitions';
 		<meta property="og:image:height" content="630">
 		<ViewTransitions />
 	</head>
-	<body class="p-4 max-w-[1070px] mx-auto pt-0">
+	<body class="p-4 w-screen max-w-[1070px] mx-auto pt-0">
 		<header class="flex flex-col items-center max-w-[1070px] mx-auto" id="home">
 			<!-- img banner -->
-			<img src="https://i.imgur.com/v4ztTLr.png" alt="banner" class="h-28 hidden pt-4 sm:w-screen sm:block md:h-32 lg:h-36 xl:h-[169px]">
+			<img src="https://i.imgur.com/v4ztTLr.png" alt="banner" class="h-28 hidden pt-4 sm:w-screen md:block md:h-32 lg:h-36 xl:h-[169px]">
 			<!-- contenedor de img y textos -->
-			<div class="flex flex-col items-center mt-[25px] w-full sm:mt-[-30px] sm:flex-row sm:justify-between sm:gap-5 sm:pl-4 md:pl-5 lg:mt-[-50px]">
-				<div class="flex flex-col sm:flex-row sm:gap-5">
-					<div class="flex flex-col items-center xl:mt-[2px]">
+			<div class="flex flex-col items-center mt-[25px] w-full sm:mt-[23px] sm:flex-row sm:justify-between sm:gap-5 sm:pl-4 md:mt-[-40px] md:pl-5 lg:mt-[-65px] xl:mt-[-50px]">
+				<div class="flex flex-col sm:flex-row sm:gap-5"> 
+					<div class="flex flex-col items-center sm:mt-3 xl:mt-[10px]">
 						<div class="border-[2px] rounded-full border-secondary-color p-1 w-max md:border-[3px] lg:w-[175px] lg:h-[175px] ">
-							<img src="https://i.imgur.com/11fIXdd.png" alt="juanantoniocu" class="w-[95px] rounded-full m-auto md:w-[100px] lg:w-[160px] lg:h-[160px] ">
+							<img src="https://i.imgur.com/11fIXdd.png" alt="juanantoniocu" class="w-[95px] rounded-full m-auto md:w-[100px] lg:w-[160px] lg:h-[160px]">
 						</div>
 						<h4 class="w-[50px] h-6 font-bold text-sm bg-rojo-color rounded-lg flex justify-center items-center mt-[-20px] lg:w-[65px] lg:h-[25px] lg:text-base">Dev</h4>
 					</div>
-					<div class="mt-4 flex flex-col items-center gap-[6px] sm:items-start sm:pt-10 md:pt-11 sm:mt-0 lg:pt-[70px] lg:pl-3 xl:pl-5">
+					<div class="mt-2 flex flex-col items-center gap-[6px] sm:items-start md:pt-12 sm:mt-0 lg:pt-[68px] lg:pl-3 xl:pt-[55px] xl:pl-5">
 						<!-- nombre y cargo -->
 						<h1 class="flex flex-row items-center gap-3 text-[34px] font-semibold text-text-color-primary w-max md:text-[28px] lg:text-[30px] lg:gap-4 xl:text-[34px]">Juan Antonio Cu</h1>
 						<h2><strong class="font-medium text-base text-text-color-secondary lg:font-medium xl:text-lg">@Desarrollador_Backend</strong></h2>
@@ -68,7 +68,7 @@ import { ViewTransitions } from 'astro:transitions';
 					</div>
 				</div>
 				<!-- btns de cv y contacto -->
-				<div class="flex flex-col w-[90%] gap-3 mt-7 flex-wrap sm:mt-11 sm:w-max sm:pt-0 md:mt-11 lg:flex-row md:pt-0 md:pr-6 lg:pr-7 lg:mt-0 lg:pt-2 xl:pt-4 xl:justify-end">
+				<div class="flex flex-col w-[90%] gap-3 mt-7 flex-wrap sm:mt-0 sm:w-max sm:pt-0 md:mt-0 lg:flex-row md:pt-11 md:pr-6 lg:pr-7 lg:mt-0 lg:pt-3 xl:pt-0 xl:justify-end">
 					<a href="https://github.com/Juanqx/juanqx-portafolio/blob/main/public/CV_JuanAntonioCuCauich_DesarrolladorBackend.pdf?raw=true" class="font-semibold gap-[5px] pr-1 text-sm h-10 sm:mt-0 sm:w-[155px] sm:h-10 border border-[#ffffff11] bg-secondary-color text-text-color-terciary rounded-2xl flex flex-row justify-center items-center lg:h-11" data-title="CV-Backend">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(16, 23, 29, 1);transform: ;msFilter:;"><path d="M18.948 11.112C18.511 7.67 15.563 5 12.004 5c-2.756 0-5.15 1.611-6.243 4.15-2.148.642-3.757 2.67-3.757 4.85 0 2.757 2.243 5 5 5h1v-2h-1c-1.654 0-3-1.346-3-3 0-1.404 1.199-2.757 2.673-3.016l.581-.102.192-.558C8.153 8.273 9.898 7 12.004 7c2.757 0 5 2.243 5 5v1h1c1.103 0 2 .897 2 2s-.897 2-2 2h-2v2h2c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888z"></path><path d="M13.004 14v-4h-2v4h-3l4 5 4-5z"></path></svg>
 						Descargar CV

@@ -15,7 +15,7 @@ const { img, anio, titulo, techs, pagina } = Astro.props;
     <img src={img} alt="equirent" class="w-[140px] min-w-[150px] min-h-[83px] rounded-xl sm:w-[300px] sm:h-[150px] lg:w-[340px] lg:h-[170px]">
     <div class="font-semibold text-xs bg-primary-color ml-[-45px] mb-[5px] py-[2px] px-[4px] rounded-[4px] flex justify-center items-center">{anio}</div>
   </a>
-  <div class="flex flex-col gap-2 sm:mr-4 sm:w-full pr-3 sm:gap-1 sm:mt-2">
+  <div class="flex flex-col gap-2 sm:w-full pr-3 sm:gap-1 sm:mt-2">
     <a class="text-base font-semibold sm:text-base" href={pagina}>{titulo}</a>
     <p class="text-base font-semibold text-text-color-secondary">{techs}</p>
   </div>
