@@ -1,15 +1,18 @@
 ---
 interface Props {
 	img: string;
-  anio: string,
+  date: string,
   titulo: string,
-  techs: string,
+  desc: string,
+  tech1: string
+  tech2: string
+  tech3: string,
   pagina: string
 }
-const { img, anio, titulo, techs, pagina } = Astro.props;
+const { img, date, titulo, desc, tech1, tech2, tech3, pagina } = Astro.props;
 ---
 
-
+<!-- 
 <article class="flex flex-row min-h-[84px] sm:flex-col sm:w-[300px] sm:mb-2 lg:w-[340px]"> 
   <a href={pagina} class="flex flex-row items-end mr-4 sm:mr-0">
     <img src={img} alt="equirent" class="w-[140px] min-w-[150px] min-h-[83px] rounded-xl sm:w-[300px] sm:h-[150px] lg:w-[340px] lg:h-[170px]">
@@ -19,4 +22,17 @@ const { img, anio, titulo, techs, pagina } = Astro.props;
     <a class="text-base font-semibold sm:text-base" href={pagina}>{titulo}</a>
     <p class="text-base font-semibold text-text-color-secondary">{techs}</p>
   </div>
+</article> -->
+
+<article class="w-full bg-cuartiary-color border border-[#ffffff11] rounded-[20px] p-6 flex flex-col">
+  <h4 class="font-extrabold text-lg text-text-color-primary">{titulo}</h4>
+  <p class="font-medium text-base text-[#C2CBD7] mt-2 lg:text-base">{desc}</p>
+  <div class="flex flex-row gap-2 mt-2">
+    <h6 class="py-1 px-2 text-sm text-text-color-secondary font-semibold border-2 border-[#ffffff11] rounded-lg" >{tech1}</h6>
+    <h6 class="py-1 px-2 text-sm text-text-color-secondary font-semibold border-2 border-[#ffffff11] rounded-lg" >{tech2}</h6>
+    <h6 class="py-1 px-2 text-sm text-text-color-secondary font-semibold border-2 border-[#ffffff11] rounded-lg" >{tech3}</h6>
+  </div>
+  <p class="text-text-color-secondary text-sm font-medium mt-2">{date}</p>
+  <img src={img} alt="imgProyect" class="w-full mt-4 rounded-xl">
+  <a href={pagina} class="mx-auto bg-white text-cuartiary-color font-semibold text-base py-2 px-3 rounded-xl mt-7">Ver Más</a>
 </article>
