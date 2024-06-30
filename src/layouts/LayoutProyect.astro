@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/montserrat';
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -25,10 +26,12 @@ import { ViewTransitions } from 'astro:transitions';
 		<meta property="og:image:height" content="630">
 		<ViewTransitions />
 	</head>
-	<body class="p-4 max-w-[1093px] mx-auto">
+	<body class="p-4 pt-7 max-w-[1093px] mx-auto">
 		
 		<!-- contenido de la página -->
 		<slot/>
+		<!-- Footer -->
+		<Footer/>
 	</body>
 </html>
 <style is:global>
