@@ -6,9 +6,11 @@ interface Props {
   tech1: string
   tech2: string
   tech3: string,
-  pagina: string
+  pagina: string,
+  textBtn: string,
+  clasesBtn: string
 }
-const { img, titulo, desc, tech1, tech2, tech3, pagina } = Astro.props;
+const { img, titulo, desc, tech1, tech2, tech3, pagina, textBtn, clasesBtn } = Astro.props;
 ---
 
 <!-- 
@@ -35,6 +37,6 @@ const { img, titulo, desc, tech1, tech2, tech3, pagina } = Astro.props;
       <h4 class="font-extrabold text-lg text-text-color-primary mt-4 lg:text-xl">{titulo}</h4>
       <p class="font-medium text-base text-text-color-secondary mt-3 mb-5 md:mb-4 md:mt-2">{desc}</p>
     </div>
-    <a href={pagina} class="w-24 h-9 flex justify-center items-center bg-white text-cuartiary-color font-semibold text-base rounded-xl">Ver Más</a>
+    <a href={pagina} class={clasesBtn}>{textBtn}</a>
   </div>
 </article>
